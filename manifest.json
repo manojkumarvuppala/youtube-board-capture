@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YT Board Capture",
+  "version": "1.0",
+  "description": "Auto-captures YouTube lecture boards and exports to PDF.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["jspdf.umd.min.js", "content.js"]
+    }
+  ]
+}
